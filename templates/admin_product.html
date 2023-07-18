@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/admin_product.css' %}">
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required><br>
+
+        <label for="productDescription">Product Description:</label>
+        <textarea id="text" name="productDescription" required></textarea><br>
+
+        <label for="productimage">Product Image:</label>
+        <input type="file" id="productimage" name="productimage" accept="image/*" required><br>
+
+        <label for="product_id">Product Id:</label>
+        <input type="number" id="product_id" name="product_id" required><br>
+
+        <label for="productwarranty">Product warranty:</label>
+        <input type="text" id="productwarranty" name="productwarranty" required><br>
+
+        <label for="productprice">Product price:</label>
+        <input type="number" id="productprice" name="productprice" required><br>
+
+        <label for="productcategory">Product category:</label>
+        <input type="text" id="productcategory" name="productcategory" required><br>
+
+        <label for="productquantity">Product quantity:</label>
+        <input type="text" id="productquantity" name="productquantity" required><br>
+
+
+
+        <input type="submit" value="Add Product">
+    </form>
+</body>
+</html>
